@@ -120,17 +120,17 @@ nav ul li a:hover {
 
 /* Assign different animation delays to each quote */
 #scrollingText .quote:nth-child(1) { animation-delay: 0s; }
-#scrollingText .quote:nth-child(2) { animation-delay: 6s; }
-#scrollingText .quote:nth-child(3) { animation-delay: 12s; }
-#scrollingText .quote:nth-child(4) { animation-delay: 18s; }
-#scrollingText .quote:nth-child(5) { animation-delay: 24s; }
-#scrollingText .quote:nth-child(6) { animation-delay: 30s; }
-#scrollingText .quote:nth-child(7) { animation-delay: 36s; }
-#scrollingText .quote:nth-child(8) { animation-delay: 42s; }
+#scrollingText .quote:nth-child(10) { animation-delay: 6s; }
+#scrollingText .quote:nth-child(4) { animation-delay: 12s; }
+#scrollingText .quote:nth-child(8) { animation-delay: 18s; }
+#scrollingText .quote:nth-child(2) { animation-delay: 24s; }
+#scrollingText .quote:nth-child(7) { animation-delay: 30s; }
+#scrollingText .quote:nth-child(5) { animation-delay: 36s; }
+#scrollingText .quote:nth-child(3) { animation-delay: 42s; }
 #scrollingText .quote:nth-child(9) { animation-delay: 48s; }
-#scrollingText .quote:nth-child(10) { animation-delay: 54s; }
+#scrollingText .quote:nth-child(12) { animation-delay: 54s; }
 #scrollingText .quote:nth-child(11) { animation-delay: 60s; }
-#scrollingText .quote:nth-child(12) { animation-delay: 66s; }
+#scrollingText .quote:nth-child(6) { animation-delay: 66s; }
 
 
 section {
