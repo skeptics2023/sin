@@ -2,13 +2,13 @@ This is the development site for the Skeptical Inquiry Network Inc., a registere
 
 Our main objective is to promote critical thinking, scientific skepticism, and rational inquiry within society. We aim to:
 
-Encourage evidence-based thinking in addressing societal issues.
-Advocate for the use of science and reason in public policy.
-Challenge pseudoscience, superstition, and misinformation.
-Support educational initiatives that enhance scientific literacy.
-Build a community of skeptics and rational thinkers in Eswatini and beyond.
-Foster open discussion and debate on controversial and misunderstood topics.
-Provide a platform for public engagement in scientific skepticism.
-Empower individuals to make informed decisions based on critical evaluation of evidence.
-Collaborate with like-minded organisations for greater societal impact.
-Promote the separation of religious ideologies from scientific and educational institutions.
+1. Encourage evidence-based thinking in addressing societal issues.
+2. Advocate for the use of science and reason in public policy.
+3. Challenge pseudoscience, superstition, and misinformation.
+4. Support educational initiatives that enhance scientific literacy.
+5. Build a community of skeptics and rational thinkers in Eswatini and beyond.
+6. Foster open discussion and debate on controversial and misunderstood topics.
+7. Provide a platform for public engagement in scientific skepticism.
+8. Empower individuals to make informed decisions based on critical evaluation of evidence.
+9. Collaborate with like-minded organisations for greater societal impact.
+10. Promote the separation of religious ideologies from scientific and educational institutions.
