@@ -17,7 +17,7 @@ header {
 }
 
 .logo img {
-    width: 260px; /* Reduced size to half */
+    width: 200px; /* Reduced size to half */
     height: auto;
     border-radius: 10px; /* Slight rounding for a smoother look */
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Subtle shadow to blend with background */
