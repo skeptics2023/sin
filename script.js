@@ -22,3 +22,14 @@ setInterval(function() {
 }, 5000);
 
 showSlide(currentSlide);
+
+// script.js
+document.addEventListener("DOMContentLoaded", function() {
+    const menuToggle = document.getElementById("menu-toggle");
+    const navMenu = document.getElementById("nav-menu");
+
+    menuToggle.addEventListener("click", function() {
+        // Toggle a class to show/hide the menu
+        navMenu.classList.toggle("menu-active");
+    });
+});

@@ -8,7 +8,7 @@ body {
 }
 
 header {
-    background: #333;
+    background: #333; /* Background color for header */
     color: #fff;
     padding: 1px; /* Adjusted padding */
     display: flex;
@@ -17,7 +17,7 @@ header {
 }
 
 .logo img {
-    width: 160px; /* Reduced size to half */
+    width: 260px; /* Reduced size to half */
     height: auto;
     border-radius: 10px; /* Slight rounding for a smoother look */
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Subtle shadow to blend with background */
@@ -36,11 +36,15 @@ header {
     margin-top: 100px; /* Optional: add space above the datetime */
 }
 
+nav {
+    position: relative; /* For positioning the menu toggle */
+}
+
 nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    display: flex;
+    display: flex; /* Display items in a row */
 }
 
 nav ul li {
@@ -48,36 +52,103 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
-    text-decoration: none;
+    color: #fff; /* Text color for links */
+    text-decoration: none; /* No underline */
     font-size: 22px; /* Consistent font size */
-    transition: color 0.3s;
+    transition: color 0.3s; /* Smooth transition for color change */
 }
 
 nav ul li a:hover {
     color: #75feff; /* Hover color change */
 }
 
+/* Hamburger menu styling */
+.menu-toggle {
+    display: none; /* Hide on larger screens */
+    font-size: 30px;
+    cursor: pointer;
+    color: #fff; /* Color for the hamburger menu */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Show hamburger icon */
+    }
+
+    nav ul {
+        display: none; /* Hide menu items initially */
+        flex-direction: column; /* Stack items vertically */
+        width: 100%; /* Full width */
+        background-color: #333; /* Same as header background */
+        position: absolute; /* Positioning for dropdown */
+        top: 50px; /* Adjust based on header height */
+        left: 0;
+        z-index: 1000; /* Ensure it appears above other content */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Space between items in dropdown */
+    }
+
+    nav ul.active {
+        display: flex; /* Show menu when active */
+    }
+}
 .scrolling-text {
     padding: 10px;
-    font-size: 20px; /* Adjusted font size */
+    font-size: 16px; /* Ensure this matches the span font size */
     color: #333; /* Text color */
-    white-space: nowrap;
-    overflow: hidden;
-    animation: scroll 45s linear infinite;
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Hide overflow */
+    display: inline-block; /* Allow scrolling of inline elements */
+    width: 100%; /* Ensure full width of the container */
+}
+
+.quote {
+    display: inline-block; /* Allow quotes to be treated as a block */
 }
 
 @keyframes scroll {
     0% {
-        transform: translateX(100%);
+        transform: translateX(100%); /* Start off-screen */
     }
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-100%); /* End off-screen */
     }
 }
 
+.scrolling-text::after {
+    content: attr(id); /* Duplicate the content for seamless scrolling */
+    animation: scroll 45s linear infinite; /* Scrolling animation */
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%); /* Start off-screen */
+    }
+    100% {
+        transform: translateX(-80%); /* End off-screen */
+    }
+}
+
+/* Apply the animation to the quotes directly */
+#scrollingText {
+    animation: scroll 45s linear infinite; /* Adjust duration for scrolling speed */
+    font-size: 10px !important; /* Force smaller font size */
+}
+
+
+/* Apply the animation to the quotes directly */
+#scrollingText {
+    animation: scroll 45s linear infinite; /* Adjust duration for scrolling speed */
+}
+
+
 section {
-    padding: 20px;
+    padding: 10px;
     background: #fff; /* Section background color */
     margin: 10px; /* Margin between sections */
     border-radius: 8px; /* Rounded corners */
@@ -92,9 +163,10 @@ h2 {
     margin: 0 auto; /* Center the underline */
     text-align: center; /* Center-align the text */
 }
+
 .team-member {
     display: flex;
-    align-items: center;
+    align-items: center; /* Center items vertically */
     margin-bottom: 15px; /* Space between team members */
 }
 
@@ -138,14 +210,15 @@ h2 {
 }
 
 footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
+    background: #333; /* Footer background color */
+    color: #fff; /* Text color for footer */
+    text-align: center; /* Center text */
     padding: 15px 0; /* Padding for footer */
     position: relative; /* Positioning */
     bottom: 0; /* Footer at bottom */
     width: 100%; /* Full width */
 }
+
 /* General styles for sections */
 section {
     display: flex; /* Enable flexbox */
@@ -185,9 +258,10 @@ section > div {
 
 #contact {
     background-color: #ffe6e6; /* Light red */
-    margin-bottom: 16px;
+    margin-bottom: 16px; /* Margin for spacing */
     display: block;
 }
+
 .donate-button {
     margin: 10px 20px; /* Add some margin for spacing */
 }
@@ -205,4 +279,9 @@ section > div {
 .donate-button a:hover {
     background-color: #ff1a1a; /* Darker red on hover */
 }
-
+.scrolling-text {
+    font-size: 1.5em;
+    padding: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+}

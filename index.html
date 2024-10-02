@@ -8,38 +8,55 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="sin_logo.png" alt="SIN Logo">
+<header>
+    <div class="logo">
+        <img src="sin_logo.png" alt="SIN Logo">
+    </div>
+
+    <div class="welcome-message">
+        <strong id="greeting"></strong> Welcome to the Skeptical Inquiry Network
+        <div class="datetime">
+            <i class="far fa-clock" id="clock-icon"></i> 
+            <span id="clock"></span> | 
+            <i class="far fa-calendar-alt" id="date-icon"></i> 
+            <span id="date"></span>
         </div>
-        <div class="welcome-message">
-            <strong id="greeting"></strong> Welcome to the Skeptical Inquiry Network
-            <div class="datetime">
-                <i class="far fa-clock" id="clock-icon"></i> 
-                <span id="clock"></span> | 
-                <i class="far fa-calendar-alt" id="date-icon"></i> 
-                <span id="date"></span>
-            </div>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#membership">Membership</a></li>
-                <li><a href="#resources">Resources</a></li>
-                <li><a href="#team">Team</a></li>
-                <li><a href="#news">News</a></li> 
-                <li><a href="#contact">Contact</a></li> 
-            </ul>
-        </nav>
+    </div>
+
+    <nav>
+        <!-- Hamburger menu icon -->
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+
+        <ul id="menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#membership">Membership</a></li>
+            <li><a href="#resources">Resources</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#news">News</a></li> 
+            <li><a href="#contact">Contact</a></li> 
+        </ul>
+    </nav>
+
     <div class="donate-button">
         <a href="https://example.com/donate" target="_blank">Donate</a>
     </div>
-    </header>
-    <div class="scrolling-text">
-        "Skepticism is the first step on the road to philosophy." - Diogenes Laertius&nbsp;&nbsp;&nbsp;&nbsp;
-        "Extraordinary claims require extraordinary evidence." - Carl Sagan&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    </div>
+</header>
+
+<div class="scrolling-text" id="scrollingText">
+    <span class="quote" style="color: red; font-size: 16px;">“The first principle is that you must not fool yourself and you are the easiest person to fool.” - Richard Feynman</span>
+    <span class="quote" style="color: blue; font-size: 16px;">“Extraordinary claims require extraordinary evidence.” - Carl Sagan</span>
+    <span class="quote" style="color: green; font-size: 16px;">“Skepticism is the first step towards truth.” - Denis Diderot</span>
+    <span class="quote" style="color: orange; font-size: 16px;">“Skepticism is the foundation of all truth.” - John Locke</span>
+    <span class="quote" style="color: purple; font-size: 16px;">“The essence of science is not to see what you expect, but to see what you see.” - Karl Popper</span>
+    <span class="quote" style="color: teal; font-size: 16px;">“The more we know, the more we realize we know nothing.” - Socrates</span>
+    <span class="quote" style="color: brown; font-size: 16px;">“Doubt is the origin of wisdom.” - René Descartes</span>
+    <span class="quote" style="color: pink; font-size: 16px;">“A wise man proportions his belief to the evidence.” - David Hume</span>
+    <span class="quote" style="color: navy; font-size: 16px;">“The greatest enemy of knowledge is not ignorance, it is the illusion of knowledge.” - Stephen Hawking</span>
+    <span class="quote" style="color: olive; font-size: 16px;">“The first step in the acquisition of wisdom is doubt.” - Pierre Abelard</span>
+    <span class="quote" style="color: gray; font-size: 16px;">“In seeking truth, you have to get both sides of a story.” - Walter Cronkite</span>
+    <span class="quote" style="color: maroon; font-size: 16px;">“Facts do not cease to exist because they are ignored.” - Aldous Huxley</span>
+</div>
 
    <section id="about">
     <h2>About Us</h2>
@@ -61,7 +78,6 @@
     <p>We invite you to join us in our mission to cultivate a culture of inquiry and rational thought. Together, we can make a difference in our communities and beyond.</p>
 </section>
 
-
 <section id="resources">
     <h2>Resources</h2>
     <p>The Skeptical Inquiry Network (SIN) is dedicated to providing a comprehensive collection of resources that promote scientific skepticism and critical thinking. Our resources are designed to empower individuals with knowledge and tools to question claims and make informed decisions.</p>
@@ -75,29 +91,80 @@
     <p>We are committed to continuously updating our resource library to ensure that our members and the public have access to the latest information and tools. Explore our resources to expand your understanding and join us in the pursuit of knowledge!</p>
 </section>
 
-    <section id="team">
-        <h2>Meet the Team</h2>
+<section id="team">
+    <h2>Meet the Team</h2>
+    
+    <div class="team-container">
         <div class="team-member">
             <img src="https://via.placeholder.com/100/CCCCCC/000000?text=Avatar" alt="Dr Majahonkhe M. Shabangu">
-            <h3>Majahonkhe Shabangu,</h3>&nbsp
-            <p>CEO</p>
+	    <h3>Majahonkhe Shabangu</h3>&nbsp;&nbsp;&nbsp;&nbsp;
+	    <p class="title"><em>Chief Executive Officer</em></p>&nbsp;&nbsp;&nbsp;&nbsp;
+            <p>Majahonkhe helps provide visionary leadership, sets strategic goals, and oversees the organisation’s direction. He represents SIN on a global stage, making high-level decisions that shape its future.</p>
         </div>
+
         <div class="team-member">
             <img src="https://via.placeholder.com/100/CCCCCC/000000?text=Avatar" alt="Dr Thando W. Shabangu">
-            <h3>Thando Shabangu,</h3>&nbsp
-            <p>COO</p>
+            <h3>Thando Shabangu</h3>&nbsp;&nbsp;&nbsp;&nbsp;
+            <p class="title"><em>Chief Operations Officer</em></p>&nbsp;&nbsp;&nbsp;&nbsp;
+            <p>Thando oversees daily operations, ensuring that all programs and initiatives run smoothly. He manages internal affairs and turns strategic plans into concrete outcomes.</p>
         </div>
+
         <div class="team-member">
             <img src="https://via.placeholder.com/100/CCCCCC/000000?text=Avatar" alt="Mr Maphila W. Kunene">
-            <h3>Maphila Kunene,</h3>&nbsp
-            <p>CTO</p>
+            <h3>Maphila Kunene</h3>&nbsp;&nbsp;&nbsp;&nbsp;
+            <p class="title"><em>Chief Technology Officer</em></p>&nbsp;&nbsp;&nbsp;&nbsp;
+            <p>Maphila leads the technological aspects of SIN, including digital platform development and cybersecurity. He ensures that SIN's technology supports its mission and global engagement.</p>
         </div>
+
         <div class="team-member">
             <img src="https://via.placeholder.com/100/CCCCCC/000000?text=Avatar" alt="Mr Muzi S. Vilakati">
-            <h3>Muzi Vilakati,</h3>&nbsp
-            <p>CSO</p>
+            <h3>Muzi Vilakati</h3>&nbsp;&nbsp;&nbsp;&nbsp;
+            <p class="title"><em>Chief Strategy Officer</em></p>&nbsp;&nbsp;&nbsp;&nbsp;
+            <p>Muzi focuses on long-term planning and strategy. He identifies growth opportunities and ensures SIN’s activities align with its broader goals for sustainable development.</p>
         </div>
-    </section>
+    </div>
+</section>
+
+<style>
+    #team {
+        text-align: center;
+    }
+
+    .team-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between; /* Spread team members out */
+        gap: 30px; /* Add space between team members */
+    }
+
+    .team-member {
+        width: 45%; /* Adjust to fit two members per row */
+        min-width: 280px;
+        text-align: left;
+        background-color: #f4f4f4;
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .team-member img {
+        display: block;
+        margin: 0 auto 10px auto; /* Center the image with margin below */
+        border-radius: 50%;
+    }
+
+    .team-member h3 {
+        margin-top: 10px;
+        margin-bottom: 5px;
+        font-size: 18px;
+    }
+
+    .team-member .title {
+        margin-bottom: 10px; /* Add space between the title and description */
+        font-style: italic;
+        font-weight: bold;
+    }
+</style>
+
 
     <section id="news">
      <div>
@@ -163,55 +230,69 @@
     </form>
 </section>
 
-    <footer>
-        <p>Freshman Park, UNESWA - Kwaluseni Campus, Eswatini • &copy; 2024 Skeptical Inquiry Network • All rights reserved.</p>
-    </footer>
+<footer>
+    <p>Freshman Park, UNESWA - Kwaluseni Campus, Eswatini • &copy; 2024 Skeptical Inquiry Network. All rights reserved.</p>
+</footer>
 
-    <script>
-        let currentSlideIndex = 1;
+<script>
+function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('active');
+}
 
-        function showSlide(n) {
-            const slides = document.querySelectorAll('.news-slide');
-            const dots = document.querySelectorAll('.dot');
-            const newsText = document.getElementById('news-item-text');
+function updateTime() {
+    const now = new Date();
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    document.getElementById('date').innerText = now.toLocaleDateString(undefined, options);
+    document.getElementById('clock').innerText = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+}
 
-            if (n > slides.length) { currentSlideIndex = 1; }
-            if (n < 1) { currentSlideIndex = slides.length; }
+function getGreeting() {
+    const hour = new Date().getHours();
+    if (hour < 12) {
+        return 'Good morning!';
+    } else if (hour < 18) {
+        return 'Good afternoon!';
+    } else {
+        return 'Good evening!';
+    }
+}
 
-            newsText.innerHTML = `News Item ${currentSlideIndex}`;
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
 
-            slides.forEach((slide, index) => {
-                slide.style.transform = `translateX(-${(currentSlideIndex - 1) * 100}%)`;
-            });
+function showSlides(n) {
+    const slides = document.getElementsByClassName("news-slide");
+    const dots = document.getElementsByClassName("dot");
+    
+    if (n > slides.length) { slideIndex = 1; }
+    if (n < 1) { slideIndex = slides.length; }
+    
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    
+    for (let i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    
+    slides[slideIndex - 1].style.display = "block";  
+    dots[slideIndex - 1].className += " active";
+}
 
-            dots.forEach(dot => dot.classList.remove('active'));
-            dots[currentSlideIndex - 1].classList.add('active');
-        }
+let slideIndex = 1;
+showSlides(slideIndex);
+setInterval(() => {
+    slideIndex++;
+    showSlides(slideIndex);
+}, 5000);
 
-        function currentSlide(n) {
-            currentSlideIndex = n;
-            showSlide(n);
-        }
-
-        setInterval(function() {
-            currentSlideIndex++;
-            showSlide(currentSlideIndex);
-        }, 5000);
-
-        showSlide(currentSlideIndex);
-    </script>
-
-    <script>
-        function updateGreeting() {
-            const now = new Date();
-            const hour = now.getHours();
-            const greeting = hour < 12 ? "Good morning!" : hour < 18 ? "Good afternoon!" : "Good evening!";
-            document.getElementById("greeting").innerText = greeting;
-            document.getElementById("clock").innerText = now.toLocaleTimeString();
-            document.getElementById("date").innerText = now.toLocaleDateString();
-        }
-        setInterval(updateGreeting, 1000);
-        updateGreeting(); // Initial call
-    </script>
+document.addEventListener("DOMContentLoaded", function() {
+    updateTime();
+    document.getElementById('greeting').innerText = getGreeting();
+    setInterval(updateTime, 60000); // Update time every minute
+});
+</script>
 </body>
 </html>
