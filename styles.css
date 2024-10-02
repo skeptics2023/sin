@@ -104,71 +104,34 @@ nav ul li a:hover {
     100% { opacity: 0; }      /* Stay invisible */
 }
 
-/* Ensure all quotes are initially invisible except the first one */
+/* Ensure all quotes are initially invisible */
 #scrollingText .quote {
-    opacity: 0;
+    opacity: 0;  /* Initially invisible */
+    animation: fade 66s infinite; /* Set a duration for the cycle */
 }
 
-#scrollingText .quote:nth-child(1) {
-    animation: fade 144s infinite;
-    animation-delay: 0s;    /* Start immediately */
-    opacity: 1;             /* Initially visible */
+/* Define the fade keyframes */
+@keyframes fade {
+    0% { opacity: 0; }
+    10% { opacity: 1; }   /* Fade in */
+    20% { opacity: 1; }   /* Remain visible */
+    30% { opacity: 0; }   /* Fade out */
 }
 
-#scrollingText .quote:nth-child(2) {
-    animation: fade 144s infinite;
-    animation-delay: 12s;   /* Start after 12 seconds */
-}
+/* Assign different animation delays to each quote */
+#scrollingText .quote:nth-child(1) { animation-delay: 0s; }
+#scrollingText .quote:nth-child(2) { animation-delay: 6s; }
+#scrollingText .quote:nth-child(3) { animation-delay: 12s; }
+#scrollingText .quote:nth-child(4) { animation-delay: 18s; }
+#scrollingText .quote:nth-child(5) { animation-delay: 24s; }
+#scrollingText .quote:nth-child(6) { animation-delay: 30s; }
+#scrollingText .quote:nth-child(7) { animation-delay: 36s; }
+#scrollingText .quote:nth-child(8) { animation-delay: 42s; }
+#scrollingText .quote:nth-child(9) { animation-delay: 48s; }
+#scrollingText .quote:nth-child(10) { animation-delay: 54s; }
+#scrollingText .quote:nth-child(11) { animation-delay: 60s; }
+#scrollingText .quote:nth-child(12) { animation-delay: 66s; }
 
-#scrollingText .quote:nth-child(3) {
-    animation: fade 144s infinite;
-    animation-delay: 24s;   /* Start after 24 seconds */
-}
-
-#scrollingText .quote:nth-child(4) {
-    animation: fade 144s infinite;
-    animation-delay: 36s;   /* Start after 36 seconds */
-}
-
-#scrollingText .quote:nth-child(5) {
-    animation: fade 144s infinite;
-    animation-delay: 48s;   /* Start after 48 seconds */
-}
-
-#scrollingText .quote:nth-child(6) {
-    animation: fade 144s infinite;
-    animation-delay: 60s;   /* Start after 60 seconds */
-}
-
-#scrollingText .quote:nth-child(7) {
-    animation: fade 144s infinite;
-    animation-delay: 72s;   /* Start after 72 seconds */
-}
-
-#scrollingText .quote:nth-child(8) {
-    animation: fade 144s infinite;
-    animation-delay: 84s;   /* Start after 84 seconds */
-}
-
-#scrollingText .quote:nth-child(9) {
-    animation: fade 144s infinite;
-    animation-delay: 96s;   /* Start after 96 seconds */
-}
-
-#scrollingText .quote:nth-child(10) {
-    animation: fade 144s infinite;
-    animation-delay: 108s;  /* Start after 108 seconds */
-}
-
-#scrollingText .quote:nth-child(11) {
-    animation: fade 144s infinite;
-    animation-delay: 120s;  /* Start after 120 seconds */
-}
-
-#scrollingText .quote:nth-child(12) {
-    animation: fade 144s infinite;
-    animation-delay: 132s;  /* Start after 132 seconds */
-}
 
 section {
     padding: 10px;
