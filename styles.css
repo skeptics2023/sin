@@ -3,285 +3,310 @@ body {
     margin: 0;
     padding: 0;
     background-color: #a6feff; /* Light background color */
-    font-size: 20px; /* Change this to adjust the size across the entire site */
-    line-height: 1.6; /* Optional: Improves text readability */
+    font-size: 20px; /* Adjust size across the entire site */
+    line-height: 1.6; /* Improves text readability */
 }
 
 header {
-    background: #333; /* Background color for header */
+    background: #333; /* Header background color */
     color: #fff;
-    padding: 1px; /* Adjusted padding */
+    padding: 1px; /* Adjust padding */
     display: flex;
     align-items: center;
     justify-content: space-between; /* Space between logo and nav */
 }
 
 .logo img {
-    width: 200px; /* Reduced size to half */
+    width: 270px; /* Adjusted logo size */
     height: auto;
-    border-radius: 10px; /* Slight rounding for a smoother look */
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Subtle shadow to blend with background */
+    border-radius: 10px; /* Smoother look */
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .welcome-message {
     color: #fff; /* Text color */
-    font-size: 25px; /* Font size for the welcome message */
-    text-align: center; /* Center the text */
-    margin: 0 20px; /* Add margin for spacing */
-    flex-grow: 1; /* Allow the message to take available space */
+    font-size: 28px; /* Font size for welcome message */
+    text-align: center;
+    margin: 0 10px; /* Spacing */
+    flex-grow: 1; /* Fills available space */
 }
 
 .datetime {
-    font-size: 20px; /* Adjusted font size for date and time */
-    margin-top: 100px; /* Optional: add space above the datetime */
+    font-size: 20px;
+    margin-top: 80px; /* Optional: adjust space above datetime */
 }
 
 nav {
-    position: relative; /* For positioning the menu toggle */
+    position: relative; /* Position for the menu toggle */
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    display: flex; /* Display items in a row */
+    display: flex; /* Horizontal row display */
 }
 
 nav ul li {
-    margin-left: 20px; /* Increased space between items */
+    margin-left: 20px; /* Spacing between items */
 }
 
 nav ul li a {
-    color: #fff; /* Text color for links */
-    text-decoration: none; /* No underline */
+    color: #fff; /* Link text color */
+    text-decoration: none;
     font-size: 22px; /* Consistent font size */
-    transition: color 0.3s; /* Smooth transition for color change */
+    transition: color 0.3s; /* Smooth transition */
 }
 
 nav ul li a:hover {
-    color: #75feff; /* Hover color change */
+    color: #75feff; /* Hover color */
 }
 
-/* Hamburger menu styling */
+/* Hamburger menu for small screens */
 .menu-toggle {
-    display: none; /* Hide on larger screens */
+    display: none; /* Hidden on larger screens */
     font-size: 30px;
     cursor: pointer;
-    color: #fff; /* Color for the hamburger menu */
+    color: #fff; /* Color for hamburger icon */
 }
 
-/* Responsive styles */
 @media (max-width: 768px) {
     .menu-toggle {
-        display: block; /* Show hamburger icon */
+        display: block; /* Show hamburger icon on small screens */
     }
 
     nav ul {
-        display: none; /* Hide menu items initially */
+        display: none; /* Hide menu initially */
         flex-direction: column; /* Stack items vertically */
-        width: 100%; /* Full width */
-        background-color: #333; /* Same as header background */
-        position: absolute; /* Positioning for dropdown */
-        top: 50px; /* Adjust based on header height */
+        width: 450%; /* Full width */
+        background-color: #333;
+        position: absolute; /* Dropdown position */
+        top: 50px; /* Below header */
         left: 0;
-        z-index: 1000; /* Ensure it appears above other content */
-    }
-
-    nav ul li {
-        margin: 10px 0; /* Space between items in dropdown */
+        z-index: 1000; /* Ensure above other content */
     }
 
     nav ul.active {
         display: flex; /* Show menu when active */
     }
-}
-.scrolling-text {
-    padding: 10px;
-    font-size: 16px; /* Ensure this matches the span font size */
-    color: #333; /* Text color */
-    white-space: nowrap; /* Prevent text wrapping */
-    overflow: hidden; /* Hide overflow */
-    display: inline-block; /* Allow scrolling of inline elements */
-    width: 100%; /* Ensure full width of the container */
-}
 
-.quote {
-    display: inline-block; /* Allow quotes to be treated as a block */
-}
-
-@keyframes scroll {
-    0% {
-        transform: translateX(100%); /* Start off-screen */
-    }
-    100% {
-        transform: translateX(-100%); /* End off-screen */
+    nav ul li {
+        margin: 10px 0; /* Vertical space between items */
     }
 }
 
-.scrolling-text::after {
-    content: attr(id); /* Duplicate the content for seamless scrolling */
-    animation: scroll 45s linear infinite; /* Scrolling animation */
-    white-space: nowrap; /* Prevent text wrapping */
+/* Animation keyframes for fade effect */
+@keyframes fade {
+    0% { opacity: 0; }        /* Start invisible */
+    10% { opacity: 1; }       /* Fade in */
+    80% { opacity: 1; }       /* Stay visible */
+    90% { opacity: 0; }       /* Start fading out */
+    100% { opacity: 0; }      /* Stay invisible */
 }
 
-
-@keyframes scroll {
-    0% {
-        transform: translateX(100%); /* Start off-screen */
-    }
-    100% {
-        transform: translateX(-80%); /* End off-screen */
-    }
+/* Ensure all quotes are initially invisible except the first one */
+#scrollingText .quote {
+    opacity: 0;
 }
 
-/* Apply the animation to the quotes directly */
-#scrollingText {
-    animation: scroll 45s linear infinite; /* Adjust duration for scrolling speed */
-    font-size: 10px !important; /* Force smaller font size */
+#scrollingText .quote:nth-child(1) {
+    animation: fade 144s infinite;
+    animation-delay: 0s;    /* Start immediately */
+    opacity: 1;             /* Initially visible */
 }
 
-
-/* Apply the animation to the quotes directly */
-#scrollingText {
-    animation: scroll 45s linear infinite; /* Adjust duration for scrolling speed */
+#scrollingText .quote:nth-child(2) {
+    animation: fade 144s infinite;
+    animation-delay: 12s;   /* Start after 12 seconds */
 }
 
+#scrollingText .quote:nth-child(3) {
+    animation: fade 144s infinite;
+    animation-delay: 24s;   /* Start after 24 seconds */
+}
+
+#scrollingText .quote:nth-child(4) {
+    animation: fade 144s infinite;
+    animation-delay: 36s;   /* Start after 36 seconds */
+}
+
+#scrollingText .quote:nth-child(5) {
+    animation: fade 144s infinite;
+    animation-delay: 48s;   /* Start after 48 seconds */
+}
+
+#scrollingText .quote:nth-child(6) {
+    animation: fade 144s infinite;
+    animation-delay: 60s;   /* Start after 60 seconds */
+}
+
+#scrollingText .quote:nth-child(7) {
+    animation: fade 144s infinite;
+    animation-delay: 72s;   /* Start after 72 seconds */
+}
+
+#scrollingText .quote:nth-child(8) {
+    animation: fade 144s infinite;
+    animation-delay: 84s;   /* Start after 84 seconds */
+}
+
+#scrollingText .quote:nth-child(9) {
+    animation: fade 144s infinite;
+    animation-delay: 96s;   /* Start after 96 seconds */
+}
+
+#scrollingText .quote:nth-child(10) {
+    animation: fade 144s infinite;
+    animation-delay: 108s;  /* Start after 108 seconds */
+}
+
+#scrollingText .quote:nth-child(11) {
+    animation: fade 144s infinite;
+    animation-delay: 120s;  /* Start after 120 seconds */
+}
+
+#scrollingText .quote:nth-child(12) {
+    animation: fade 144s infinite;
+    animation-delay: 132s;  /* Start after 132 seconds */
+}
 
 section {
     padding: 10px;
-    background: #fff; /* Section background color */
-    margin: 10px; /* Margin between sections */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background: #fff;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
     color: #333;
-    border-bottom: 2px solid #333; /* Underline with color */
-    padding-bottom: 10px; /* Space below the heading */
-    width: 50%; /* Uniform width for all h2 underlines */
-    margin: 0 auto; /* Center the underline */
-    text-align: center; /* Center-align the text */
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .team-member {
     display: flex;
-    align-items: center; /* Center items vertically */
-    margin-bottom: 15px; /* Space between team members */
+    align-items: center;
+    margin-bottom: 15px;
 }
 
 .team-member img {
-    border-radius: 50%; /* Circular images */
-    margin-right: 10px; /* Space between image and text */
+    border-radius: 50%;
+    margin-right: 10px;
 }
 
 .news-container {
     position: relative;
-    overflow: hidden; /* Hide overflow */
-    width: 100%; /* Full width */
+    overflow: hidden;
+    width: 100%;
 }
 
 .news-slider {
-    display: flex; /* Use flex for horizontal sliding */
-    transition: transform 0.5s ease; /* Smooth transition */
+    display: flex;
+    transition: transform 0.5s ease;
 }
 
 .news-slide {
-    min-width: 100%; /* Each slide takes full width */
+    min-width: 100%;
 }
 
 .news-dots {
-    text-align: center; /* Center dots */
-    margin-top: 10px; /* Space above dots */
+    text-align: center;
+    margin-top: 10px;
 }
 
 .dot {
-    height: 10px; /* Dot height */
-    width: 10px; /* Dot width */
-    margin: 0 2px; /* Margin between dots */
-    background-color: #bbb; /* Dot color */
-    border-radius: 50%; /* Circular dots */
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
     display: inline-block;
-    cursor: pointer; /* Pointer cursor for dots */
+    cursor: pointer;
 }
 
 .dot.active {
-    background-color: #75feff; /* Active dot color */
+    background-color: #75feff;
 }
 
 footer {
-    background: #333; /* Footer background color */
-    color: #fff; /* Text color for footer */
-    text-align: center; /* Center text */
-    padding: 15px 0; /* Padding for footer */
-    position: relative; /* Positioning */
-    bottom: 0; /* Footer at bottom */
-    width: 100%; /* Full width */
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
-/* General styles for sections */
-section {
-    display: flex; /* Enable flexbox */
-    flex-wrap: wrap; /* Allow wrapping of items */
-    padding: 30px;
-}
-
-/* Styling for two-column layout */
+/* Two-column layout */
 section > div {
-    flex: 1; /* Each column takes equal space */
-    padding: 20px; /* Space around content */
-    box-sizing: border-box; /* Includes padding in width */
-    min-width: 300px; /* Minimum width for responsiveness */
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    min-width: 300px;
 }
 
-/* Team section to be full width */
-#team {
-    display: block; /* Reset flex for full width */
-}
-
-/* Additional styles to add color coding for sections */
+/* Color-coded sections */
 #about {
-    background-color: #e6f7ff; /* Light blue */
+    background-color: #e6f7ff;
 }
 
 #membership {
-    background-color: #fff3e6; /* Light orange */
+    background-color: #fff3e6;
 }
 
 #resources {
-    background-color: #f0e6ff; /* Light purple */
+    background-color: #f0e6ff;
 }
 
 #news {
-    background-color: #e6ffe6; /* Light green */
+    background-color: #e6ffe6;
 }
 
 #contact {
-    background-color: #ffe6e6; /* Light red */
-    margin-bottom: 16px; /* Margin for spacing */
-    display: block;
+    background-color: #ffe6e6;
+    margin-bottom: 16px;
 }
 
 .donate-button {
-    margin: 10px 20px; /* Add some margin for spacing */
+    margin: 10px 20px;
 }
 
 .donate-button a {
-    background-color: #ff4d4d; /* Bright red for visibility */
-    color: #fff; /* White text */
-    padding: 10px 20px; /* Padding for a button-like appearance */
-    border-radius: 5px; /* Rounded corners */
-    text-decoration: none; /* Remove underline */
-    font-size: 18px; /* Font size */
-    transition: background-color 0.3s; /* Smooth hover effect */
+    background-color: #ff4d4d;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.3s;
 }
 
 .donate-button a:hover {
-    background-color: #ff1a1a; /* Darker red on hover */
+    background-color: #ff1a1a;
 }
-.scrolling-text {
-    font-size: 1.5em;
-    padding: 20px;
-    white-space: nowrap;
-    overflow: hidden;
+/* Floating Home Button Styles */
+.floating-home-button {
+    position: fixed;          /* Fixed positioning to keep it in view */
+    bottom: 20px;            /* Space from the bottom */
+    right: 20px;             /* Space from the right */
+    background-color: #007BFF; /* Background color */
+    color: white;            /* Text color */
+    padding: 10px 15px;      /* Padding */
+    border-radius: 50%;      /* Circular shape */
+    font-size: 24px;         /* Font size */
+    text-align: center;      /* Centered text */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    transition: background-color 0.3s; /* Smooth background change */
+    z-index: 1000;           /* Higher stacking order */
 }
+
+/* Hover effect */
+.floating-home-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
