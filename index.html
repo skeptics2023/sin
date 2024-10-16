@@ -1,299 +1,121 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skeptical Inquiry Network (SIN)</title>
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
-<header>
-    <div class="logo">
-        <img src="sin_logo.png" alt="SIN Logo">
-    </div>
-    <div class="welcome-message">
-        <strong id="greeting"></strong> Welcome to the Skeptical Inquiry Network
-        <div class="datetime">
-            <i class="far fa-clock" id="clock-icon"></i> 
-            <span id="clock"></span> | 
-            <i class="far fa-calendar-alt" id="date-icon"></i> 
-            <span id="date"></span>
-        </div>
-    </div>
+<!DOCTYPE HTML>
 
-    <nav>
-        <!-- Hamburger menu icon -->
-        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+<html>
+	<head>
+    	<title>Skeptical Inquiry Network (SIN)</title>
+	<meta charset="utf-8"><meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+	<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="assets/css/main.css">
+	</head>
+	<body>
 
-        <ul id="menu">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#membership">Membership</a></li>
-            <li><a href="#resources">Resources</a></li>
-            <li><a href="#team">Team</a></li>
-            <li><a href="#news">News</a></li> 
-            <li><a href="#contact">Contact</a></li> 
-        </ul>
-    </nav>
+<!-- Header -->
+	<header id="header" class="alt"><div class="logo"><a href="index.html">S.I.N.<span>Skeptical Inquiry Network</span></a></div>
+		<a href="#menu">Menu</a>
+	</header><!-- Nav --><nav id="menu">
+		<ul class="links">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="#home">Home</a></li>
+			<li><a href="#about">About</a></li>
+			<li><a href="#membership">Membership</a></li>
+			<li><a href="#resources">Resources</a></li>
+			<li><a href="#team">Team</a></li>
+			<li><a href="#news">News</a></li> 
+			<li><a href="#contact">Contact</a></li> 
+		</ul></nav>
+		
+<!-- Banner -->
+<section class="banner full">
+	<article>
+		<img src="images/slide01.jpg" alt="" width="1440" height="961"><div class="inner">
+						<header><p>A free responsive web site template by <a href="https://templated.co">TEMPLATED</a></p>
+							<h2>Hielo</h2>
+						</header></div>
+				</article><article><img src="images/slide02.jpg" alt="" width="1440" height="961"><div class="inner">
+						<header><p>Lorem ipsum dolor sit amet nullam feugiat</p>
+							<h2>Magna</h2>
+						</header></div>
+				</article><article><img src="images/slide03.jpg" alt="" width="1440" height="962"><div class="inner">
+						<header><p>Sed cursus aliuam veroeros lorem ipsum nullam</p>
+							<h2>Tempus</h2>
+						</header></div>
+				</article><article><img src="images/slide04.jpg" alt="" width="1440" height="961"><div class="inner">
+						<header><p>Adipiscing lorem ipsum feugiat sed phasellus consequat</p>
+							<h2>Etiam</h2>
+						</header></div>
+				</article><article><img src="images/slide05.jpg" alt="" width="1440" height="962"><div class="inner">
+						<header><p>Ipsum dolor sed magna veroeros lorem ipsum</p>
+							<h2>Adipiscing</h2>
+						</header></div>
+				</article></section><!-- One --><section id="one" class="wrapper style2"><div class="inner">
+					<div class="grid-style">
 
-    <div class="donate-button">
-        <a href="https://example.com/donate" target="_blank">Donate</a>
-    </div>
-</header>
+						<div>
+							<div class="box">
+								<div class="image fit">
+									<img src="images/pic02.jpg" alt="" width="600" height="300"></div>
+								<div class="content">
+									<header class="align-center"><p>maecenas sapien feugiat ex purus</p>
+										<h2>Lorem ipsum dolor</h2>
+									</header><p> Cras aliquet urna ut sapien tincidunt, quis malesuada elit facilisis. Vestibulum sit amet tortor velit. Nam elementum nibh a libero pharetra elementum. Maecenas feugiat ex purus, quis volutpat lacus placerat malesuada.</p>
+									<footer class="align-center"><a href="#" class="button alt">Learn More</a>
+									</footer></div>
+							</div>
+						</div>
 
-<div class="scrolling-text" id="scrollingText">
-    <span class="quote" style="color: red; font-size: 20px;">“The first principle is that you must not fool yourself and you are the easiest person to fool.” - Richard Feynman</span>
-    <span class="quote" style="color: blue; font-size: 20px;">“Extraordinary claims require extraordinary evidence.” - Carl Sagan</span>
-    <span class="quote" style="color: green; font-size: 20px;">“Skepticism is the first step towards truth.” - Denis Diderot</span>
-    <span class="quote" style="color: orange; font-size: 20px;">“Skepticism is the foundation of all truth.” - John Locke</span>
-    <span class="quote" style="color: purple; font-size: 20px;">“The essence of science is not to see what you expect, but to see what you see.” - Karl Popper</span>
-    <span class="quote" style="color: teal; font-size: 20px;">“The more we know, the more we realize we know nothing.” - Socrates</span>
-    <span class="quote" style="color: brown; font-size: 20px;">“Doubt is the origin of wisdom.” - René Descartes</span>
-    <span class="quote" style="color: pink; font-size: 20px;">“A wise man proportions his belief to the evidence.” - David Hume</span>
-    <span class="quote" style="color: navy; font-size: 20px;">“The greatest enemy of knowledge is not ignorance, it is the illusion of knowledge.” - Stephen Hawking</span>
-    <span class="quote" style="color: olive; font-size: 20px;">“The first step in the acquisition of wisdom is doubt.” - Pierre Abelard</span>
-    <span class="quote" style="color: gray; font-size: 20px;">“In seeking truth, you have to get both sides of a story.” - Walter Cronkite</span>
-    <span class="quote" style="color: maroon; font-size: 20px;">“Facts do not cease to exist because they are ignored.” - Aldous Huxley</span>
-</div>
-   <section id="about">
-    <h2>About Us</h2>
-    <p>Welcome to the Skeptical Inquiry Network (SIN), a platform dedicated to promoting critical thinking and scientific inquiry. Our mission is to foster a community that encourages skepticism and evidence-based reasoning, empowering individuals to question assumptions and seek the truth.</p>
-    <p>SIN was incorporated as a non-profit making association under Section 17 of the Eswatini Companies Act No. 8 of 2009 on 13 June 2024. We strive to create a safe space for dialogue, education, and collaboration, where members can share knowledge and resources to enhance public understanding of science and skepticism.</p>
-    <p>Join us as we work towards a more informed society, advocating for transparency, accountability, and the application of scientific principles in everyday life.</p>
-</section>
+						<div>
+							<div class="box">
+								<div class="image fit">
+									<img src="images/pic03.jpg" alt="" width="600" height="300"></div>
+								<div class="content">
+									<header class="align-center"><p>mattis elementum sapien pretium tellus</p>
+										<h2>Vestibulum sit amet</h2>
+									</header><p> Cras aliquet urna ut sapien tincidunt, quis malesuada elit facilisis. Vestibulum sit amet tortor velit. Nam elementum nibh a libero pharetra elementum. Maecenas feugiat ex purus, quis volutpat lacus placerat malesuada.</p>
+									<footer class="align-center"><a href="#" class="button alt">Learn More</a>
+									</footer></div>
+							</div>
+						</div>
 
-<section id="membership">
-    <h2>Membership</h2>
-    <p>Joining the Skeptical Inquiry Network (SIN) provides you with exclusive access to a wealth of resources and opportunities to engage with a vibrant community of skeptics and critical thinkers. Our members are at the heart of our mission, driving initiatives that promote scientific inquiry and skepticism.</p>
-    <p>As a member, you will benefit from:</p>
-    <ul>
-        <li>Access to exclusive articles, research papers, and educational materials that cover a wide range of topics related to science and skepticism.</li>
-        <li>Participation in workshops, seminars, and events that foster discussion and collaboration among members.</li>
-        <li>Opportunities to contribute to community projects, helping to spread awareness and promote critical thinking in society.</li>
-        <li>Networking with like-minded individuals and professionals in the fields of science, education, and advocacy.</li>
-    </ul>
-    <p>We invite you to join us in our mission to cultivate a culture of inquiry and rational thought. Together, we can make a difference in our communities and beyond.</p>
-</section>
+					</div>
+				</div>
+			</section><!-- Two --><section id="two" class="wrapper style3"><div class="inner">
+					<header class="align-center"><p>Nam vel ante sit amet libero scelerisque facilisis eleifend vitae urna</p>
+						<h2>Morbi maximus justo</h2>
+					</header></div>
+			</section><!-- Three --><section id="three" class="wrapper style2"><div class="inner">
+					<header class="align-center"><p class="special">Nam vel ante sit amet libero scelerisque facilisis eleifend vitae urna</p>
+						<h2>Morbi maximus justo</h2>
+					</header><div class="gallery">
+						<div>
+							<div class="image fit">
+								<a href="#"><img src="images/pic01.jpg" alt="" width="600" height="300"></a>
+							</div>
+						</div>
+						<div>
+							<div class="image fit">
+								<a href="#"><img src="images/pic02.jpg" alt="" width="600" height="300"></a>
+							</div>
+						</div>
+						<div>
+							<div class="image fit">
+								<a href="#"><img src="images/pic03.jpg" alt="" width="600" height="300"></a>
+							</div>
+						</div>
+						<div>
+							<div class="image fit">
+								<a href="#"><img src="images/pic04.jpg" alt="" width="600" height="300"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section><!-- Footer --><footer id="footer"><div class="container">
+					<ul class="icons"><li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+					</ul></div>
+			</footer><div class="copyright">
+			Made with <a href="https://templated.co/">Templated</a>.
+		</div>
 
-<section id="resources">
-    <h2>Resources</h2>
-    <p>The Skeptical Inquiry Network (SIN) is dedicated to providing a comprehensive collection of resources that promote scientific skepticism and critical thinking. Our resources are designed to empower individuals with knowledge and tools to question claims and make informed decisions.</p>
-    <p>In our resource library, you will find:</p>
-    <ul>
-        <li><a href="https://example.com/articles" target="_blank"><strong>Articles and Research Papers</strong></a>: A curated selection of scholarly articles and papers covering various topics in science and skepticism.</li>
-        <li><a href="https://example.com/education" target="_blank"><strong>Educational Materials</strong></a>: Resources aimed at enhancing understanding of scientific principles, the scientific method, and critical thinking skills.</li>
-        <li><a href="https://example.com/guides" target="_blank"><strong>Guides and Toolkits</strong></a>: Practical guides to help you navigate common misconceptions, pseudoscience, and critical analysis of claims.</li>
-        <li><a href="https://example.com/multimedia" target="_blank"><strong>Multimedia Content</strong></a>: Videos, podcasts, and webinars featuring experts discussing important topics in skepticism and science.</li>
-    </ul>
-    <p>We are committed to continuously updating our resource library to ensure that our members and the public have access to the latest information and tools. Explore our resources to expand your understanding and join us in the pursuit of knowledge!</p>
-</section>
-
-<section id="team">
-    <h2>Meet the Team</h2>
-    
-    <div class="team-container">
-        <div class="team-member">
-            <img src="https://via.placeholder.com/100/CCCCCC/000000?text=Avatar" alt="Dr Majahonkhe M. Shabangu">
-	    <h3>Majahonkhe Shabangu</h3>&nbsp;&nbsp;&nbsp;&nbsp;
-	    <p class="title"><em>Chief Executive Officer</em></p>&nbsp;&nbsp;&nbsp;&nbsp;
-            <p>Majahonkhe helps provide visionary leadership, sets strategic goals, and oversees the organisation’s direction. He represents SIN on a global stage, making high-level decisions that shape its future.</p>
-        </div>
-
-        <div class="team-member">
-            <img src="https://via.placeholder.com/100/CCCCCC/000000?text=Avatar" alt="Dr Thando W. Shabangu">
-            <h3>Thando Shabangu</h3>&nbsp;&nbsp;&nbsp;&nbsp;
-            <p class="title"><em>Chief Operations Officer</em></p>&nbsp;&nbsp;&nbsp;&nbsp;
-            <p>Thando oversees daily operations, ensuring that all programs and initiatives run smoothly. He manages internal affairs and turns strategic plans into concrete outcomes.</p>
-        </div>
-
-        <div class="team-member">
-            <img src="https://via.placeholder.com/100/CCCCCC/000000?text=Avatar" alt="Mr Maphila W. Kunene">
-            <h3>Maphila Kunene</h3>&nbsp;&nbsp;&nbsp;&nbsp;
-            <p class="title"><em>Chief Technology Officer</em></p>&nbsp;&nbsp;&nbsp;&nbsp;
-            <p>Maphila leads the technological aspects of SIN, including digital platform development and cybersecurity. He ensures that SIN's technology supports its mission and global engagement.</p>
-        </div>
-
-        <div class="team-member">
-            <img src="https://via.placeholder.com/100/CCCCCC/000000?text=Avatar" alt="Mr Muzi S. Vilakati">
-            <h3>Muzi Vilakati</h3>&nbsp;&nbsp;&nbsp;&nbsp;
-            <p class="title"><em>Chief Strategy Officer</em></p>&nbsp;&nbsp;&nbsp;&nbsp;
-            <p>Muzi focuses on long-term planning and strategy. He identifies growth opportunities and ensures SIN’s activities align with its broader goals for sustainable development.</p>
-        </div>
-    </div>
-</section>
-
-<style>
-    #team {
-        text-align: center;
-    }
-
-    .team-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between; /* Spread team members out */
-        gap: 30px; /* Add space between team members */
-    }
-
-    .team-member {
-        width: 45%; /* Adjust to fit two members per row */
-        min-width: 280px;
-        text-align: left;
-        background-color: #f4f4f4;
-        padding: 15px;
-        border-radius: 10px;
-    }
-
-    .team-member img {
-        display: block;
-        margin: 0 auto 10px auto; /* Center the image with margin below */
-        border-radius: 50%;
-    }
-
-    .team-member h3 {
-        margin-top: 10px;
-        margin-bottom: 5px;
-        font-size: 18px;
-    }
-
-    .team-member .title {
-        margin-bottom: 10px; /* Add space between the title and description */
-        font-style: italic;
-        font-weight: bold;
-    }
-</style>
-
-
-    <section id="news">
-     <div>
-        <h2>News</h2>
-        <div class="news-item-text" id="news-item-text">News Item 1</div>
-        <div class="news-container">
-            <div class="news-slider">
-                <div class="news-slide">News Item 1 content goes here.</div>
-                <div class="news-slide">News Item 2 content goes here.</div>
-                <div class="news-slide">News Item 3 content goes here.</div>
-                <div class="news-slide">News Item 4 content goes here.</div>
-                <div class="news-slide">News Item 5 content goes here.</div>
-                <div class="news-slide">News Item 6 content goes here.</div>
-                <div class="news-slide">News Item 7 content goes here.</div>
-                <div class="news-slide">News Item 8 content goes here.</div>
-                <div class="news-slide">News Item 9 content goes here.</div>
-                <div class="news-slide">News Item 10 content goes here.</div>
-            </div>
-        </div>
-    
-        <div class="news-dots">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-            <span class="dot" onclick="currentSlide(4)"></span>
-            <span class="dot" onclick="currentSlide(5)"></span>
-            <span class="dot" onclick="currentSlide(6)"></span>
-            <span class="dot" onclick="currentSlide(7)"></span>
-            <span class="dot" onclick="currentSlide(8)"></span>
-            <span class="dot" onclick="currentSlide(9)"></span>
-            <span class="dot" onclick="currentSlide(10)"></span>
-        </div>
-   </div>
-    </section>
-
-<section id="contact">
-    <h2>Contact Us</h2>
-<p>We’d love to hear from you!</p>
-<p>Whether you have questions, suggestions, or need more information about the Skeptical Inquiry Network (SIN), feel free to get in touch.</p>
-
-    <p><strong>Email us at:</strong> <a href="mailto:skeptics2023@gmail.com">skeptics2023@gmail.com</a></p>
-
-    <p><strong>Follow us on social media:</strong></p>
-    <ul>
-        <li><a href="#">Facebook</a></li>
-        <li><a href="#">Twitter</a></li>
-        <li><a href="#">Instagram</a></li>
-        <!-- Add actual social media links once available -->
-    </ul>
-
-    <h3>Send Us a Message</h3>
-    <form action="mailto:skeptics2023@gmail.com" method="post" enctype="text/plain">
-        <label for="name">Your Name:</label>
-        <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
-
-        <label for="email">Your Email:</label>
-        <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
-
-        <label for="message">Your Message:</label><br>
-        <textarea id="message" name="message" rows="5" placeholder="Write your message here" required></textarea><br><br>
-
-        <input type="submit" value="Send Message">
-    </form>
-</section>
-
-<footer>
-    <p>Freshman Park, UNESWA - Kwaluseni Campus, Eswatini • &copy; 2024 Skeptical Inquiry Network. All rights reserved.</p>
-</footer>
-
-<script>
-function toggleMenu() {
-    const menu = document.getElementById('menu');
-    menu.classList.toggle('active');
-}
-
-function updateTime() {
-    const now = new Date();
-    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-    document.getElementById('date').innerText = now.toLocaleDateString(undefined, options);
-    document.getElementById('clock').innerText = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-}
-
-function getGreeting() {
-    const hour = new Date().getHours();
-    if (hour < 12) {
-        return 'Good morning!';
-    } else if (hour < 18) {
-        return 'Good afternoon!';
-    } else {
-        return 'Good evening!';
-    }
-}
-
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-    const slides = document.getElementsByClassName("news-slide");
-    const dots = document.getElementsByClassName("dot");
-    
-    if (n > slides.length) { slideIndex = 1; }
-    if (n < 1) { slideIndex = slides.length; }
-    
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-    }
-    
-    for (let i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    
-    slides[slideIndex - 1].style.display = "block";  
-    dots[slideIndex - 1].className += " active";
-}
-
-let slideIndex = 1;
-showSlides(slideIndex);
-setInterval(() => {
-    slideIndex++;
-    showSlides(slideIndex);
-}, 5000);
-
-document.addEventListener("DOMContentLoaded", function() {
-    updateTime();
-    document.getElementById('greeting').innerText = getGreeting();
-    setInterval(updateTime, 60000); // Update time every minute
-});
-</script>
-<!-- Floating Home Button -->
-<a href="" class="floating-home-button">🏠</a>
-
-</body>
-</html>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script><script src="assets/js/jquery.scrollex.min.js"></script><script src="assets/js/skel.min.js"></script><script src="assets/js/util.js"></script><script src="assets/js/main.js"></script></body></html>
